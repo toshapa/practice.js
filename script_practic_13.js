@@ -31,5 +31,4 @@ function isBudgetEnough(data) {
     return space * data.moneyPer1m3 <= data.budget ? 'Бюджета достаточно' : 'Бюджета недостаточно';
 }
 
-// isBudgetEnough(shoppingMallData);
-console.log(isBudgetEnough(shoppingMallData))
+isBudgetEnough(shoppingMallData)
