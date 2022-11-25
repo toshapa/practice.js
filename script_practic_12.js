@@ -15,16 +15,20 @@ const baseCurrencies = ['USD', 'EUR'];
 const additionalCurrencies = ['UAH', 'RUB', 'CNY',];
 
 function availableCurr(arr, missingCurr) {
-    let str = "";
-    for (let i = 0; i < arr.length; i++) {
-        if(arr[i] === missingCurr) {
-            continue;
+    let str = "Доступные валюты:\n";
+    if (arr.length === 0) {
+        str = 'Нет доступных валют';
+    } else {
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] === missingCurr) {
+                continue;
+            }
+            str += `${arr[i]}\n`;
         }
-        str += `${arr[i]}`;
     }
     console.log(str);
     return str;
 }
 
 
-availableCurr([...baseCurrencies, ...additionalCurrencies], 'USD');
+availableCurr([], 'CNY');
