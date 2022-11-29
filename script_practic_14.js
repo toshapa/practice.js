@@ -21,7 +21,7 @@ function sortStudentsByGroups(arr) {
     }
     masterArr.push(one, two, tree, `Оставшиеся студенты: ${last.length === 0 ? '-' : last.join(' ')}`)
     console.log(masterArr)
-    return one, two, tree, `Оставшиеся студенты: ${last.length === 0 ? '-' : last.join(' ')}`;
+    return (one, two, tree, `Оставшиеся студенты: ${last.length === 0 ? '-' : last.join(' ')}`);
 }
 
 sortStudentsByGroups(students);
