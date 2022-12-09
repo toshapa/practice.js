@@ -24,29 +24,29 @@ const restorantData = {
     openNow: true
 };
 
-// function isOpen(prop) {
-//     let answer = '';
-//     prop ? answer = 'Закрыто' : answer = 'Открыто';
+function isOpen(prop) {
+    let answer = '';
+    prop ? answer = 'Закрыто' : answer = 'Открыто';
 
-//     return answer;
-// }
+    return answer;
+}
 
-// console.log(isOpen(restorantData.openNow));
+console.log(isOpen(restorantData.openNow));
 
-// function isAverageLunchPriceTrue(fDish, sDish, average) {
-//     if ((+fDish.price.slice(0, -1)) + (+sDish.price.slice(0, -1)) < +average.slice(0, -1)) {
-//         return 'Цена ниже средней';
-//     } else {
-//         return 'Цена выше средней';
-//     }
-// }
+function isAverageLunchPriceTrue(fDish, sDish, average) {
+    if ((+fDish.price.slice(0, -1)) + (+sDish.price.slice(0, -1)) < +average.slice(0, -1)) {
+        return 'Цена ниже средней';
+    } else {
+        return 'Цена выше средней';
+    }
+}
 
-// console.log(isAverageLunchPriceTrue(restorantData.menu[1], restorantData.menu[3], restorantData.averageLunchPrice));
+console.log(isAverageLunchPriceTrue(restorantData.menu[1], restorantData.menu[3], restorantData.averageLunchPrice));
 
 function transferWaitors(data) {
     const copy = Object.assign({}, data);
     // console.log(copy)
-    copy.waitors[0] = [{name: 'Mike', age: 32}];
+    copy.waitors = [{name: 'Mike', age: 32}];
     return copy;
 }
 
